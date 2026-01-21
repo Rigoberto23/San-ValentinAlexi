@@ -6,14 +6,14 @@ const tuNombre = "TU NOMBRE";
 
 // 📸🎥 RECUERDOS (5 FOTOS + 3 VIDEOS)
 const recuerdos = [
-    { tipo: "foto", src: "img1.jpg", frase: "Tu sonrisa es mi lugar favorito ❤️" },
-    { tipo: "foto", src: "img2.jpg", frase: "Así se ve alguien cuando ilumina mi vida ✨" },
+    { tipo: "foto", src: "img1.jpeg", frase: "Tu sonrisa es mi lugar favorito ❤️" },
+    { tipo: "foto", src: "img2.jpeg", frase: "Así se ve alguien cuando ilumina mi vida ✨" },
     { tipo: "video", src: "vid1.mp4", frase: "Este momento vive en mi corazón 🎥💕" },
-    { tipo: "foto", src: "img3.jpg", frase: "No necesito más, si eres tú 💖" },
+    { tipo: "foto", src: "img3.jpeg", frase: "No necesito más, si eres tú 💖" },
     { tipo: "video", src: "vid2.mp4", frase: "Cada risa contigo vale oro 😍" },
-    { tipo: "foto", src: "img4.jpg", frase: "Siempre tú, en todas mis versiones 💫" },
+    { tipo: "foto", src: "img4.jpeg", frase: "Siempre tú, en todas mis versiones 💫" },
     { tipo: "video", src: "vid3.mp4", frase: "Contigo todo tiene sentido 💕" },
-    { tipo: "foto", src: "img5.jpg", frase: "Te elijo hoy y siempre ❤️" }
+    { tipo: "foto", src: "img5.jpeg", frase: "Te elijo hoy y siempre ❤️" }
 ];
 
 let indice = 0;
@@ -94,3 +94,4 @@ function mostrarFinal() {
 
     app.appendChild(final);
 }
+
