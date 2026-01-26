@@ -4,7 +4,7 @@ body {
   color: white;
   text-align: center;
 
-  background-image: url("fondo.jpeg"); /* 👈 AQUÍ */
+  background-image: url("fondo.jpg"); /* 👈 AQUÍ */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -71,5 +71,6 @@ button:hover {
     margin-top: 20px;
     font-size: 1.15em;
 }
+
 
 
