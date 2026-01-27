@@ -2,157 +2,46 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>05 Razones ❤️</title>
+  <title>Para ti ❤️</title>
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Fuente cursiva romántica -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      background-color: #f7d6dc;
-      display: flex;
-      justify-content: center;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .pagina {
-      width: 420px; /* estilo celular */
-      background-image: url("fondo.jpg");
-      background-size: cover;
-      background-position: center;
-      padding: 25px 20px;
-      box-sizing: border-box;
-    }
-
-    .titulo {
-      text-align: center;
-      color: #c0392b;
-    }
-
-    .titulo h1 {
-      font-size: 48px;
-      margin: 10px 0 0;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .titulo h2 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 42px;
-      margin: 0;
-      font-weight: normal;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto;
-      gap: 20px;
-      margin-top: 30px;
-      position: relative;
-    }
-
-    /* líneas divisorias */
-    .grid::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: rgba(192,57,43,0.4);
-      top: 33%;
-    }
-
-    .grid::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: rgba(192,57,43,0.4);
-      top: 66%;
-    }
-
-    .vertical-line {
-      position: absolute;
-      width: 2px;
-      height: 100%;
-      background: rgba(192,57,43,0.4);
-      left: 50%;
-      top: 0;
-    }
-
-    .razon {
-      text-align: center;
-      color: #7b241c;
-      padding: 10px;
-    }
-
-    .numero {
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    .texto {
-      font-size: 16px;
-      margin-top: 8px;
-    }
-
-    .corazon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .corazon img {
-      width: 40px;
-      opacity: 0.8;
-    }
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="pagina">
-
-    <div class="titulo">
-      <h1>05 Razones</h1>
-      <h2>por las que eres mi elección perfecta</h2>
+  <!-- 💌 CARTITA -->
+  <section class="cartita">
+    <div class="cartita-overlay">
+      <p>Te tengo una sorpresa…</p>
+      <p>No es por una fecha.</p>
+      <p>Es porque te amo ❤️</p>
+      <button onclick="irARazones()">Descubrir 💌</button>
     </div>
+  </section>
+
+  <!-- 💖 RAZONES -->
+  <section class="razones" id="razones">
+    <h2>05 razones por las que eres mi elección</h2>
 
     <div class="grid">
-      <div class="vertical-line"></div>
+      <div class="linea"></div>
 
-      <div class="razon">
-        <div class="numero">1</div>
-        <div class="texto">Tienes la sonrisa más linda del universo.</div>
-      </div>
+      <div class="razon izquierda">1. Tu sonrisa es mi lugar favorito.</div>
+      <div class="razon derecha">3. Contigo cualquier día se siente especial.</div>
 
-      <div class="razon">
-        <div class="numero">3</div>
-        <div class="texto">Contigo, cualquier día se siente especial.</div>
-      </div>
+      <div class="razon izquierda">2. Mi corazón late más rápido cuando te pienso.</div>
+      <div class="razon derecha">4. Eres mi persona favorita para compartir momentos.</div>
 
-      <div class="corazon">
-        <img src="corazon.png">
-      </div>
-
-      <div class="razon">
-        <div class="numero">2</div>
-        <div class="texto">Haces que mi corazón lata más rápido cuando te pienso.</div>
-      </div>
-
-      <div class="razon">
-        <div class="numero">4</div>
-        <div class="texto">Eres mi persona favorita para compartir momentos.</div>
-      </div>
-
-      <div class="razon">
-        <div class="numero">5</div>
-        <div class="texto">No imagino a nadie más a mi lado este San Valentín.</div>
-      </div>
-
+      <div class="razon centro">5. Porque no imagino la vida sin ti.</div>
     </div>
 
-  </div>
+    <button onclick="iniciarRecuerdos()">Continuar 💕</button>
+  </section>
 
+  <!-- 📸🎥 RECUERDOS -->
+  <div id="app"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
