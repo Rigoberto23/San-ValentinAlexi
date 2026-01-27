@@ -15,6 +15,7 @@ body {
 }
 
 .cartita-overlay {
+  position: relative; /* 🔑 CLAVE */
   background: url("cartita.jpg") center/contain no-repeat;
   width: 612px;
   height: 413px;
@@ -26,8 +27,30 @@ body {
 
   font-family: 'Great Vibes', cursive;
   font-size: 28px;
+
+  /* 🎯 MISMO COLOR QUE EL TEXTO */
   color: #7b1e28;
+
   text-align: center;
+}
+
+/* ✍️ DEDICATORIA */
+.dedicatoria {
+  position: absolute;
+  top: 18px;
+  left: 25px;
+  right: 25px;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: 'Great Vibes', cursive;
+  font-size: 22px;
+
+  /* 🔥 MISMO COLOR EXACTO */
+  color: #7b1e28;
+
+  z-index: 10;
 }
 
 .cartita-overlay button {
@@ -121,26 +144,8 @@ button {
   position: relative; /* necesario para ubicar textos */
 }
 
-/* 💌 DEDICATORIA */
-.dedicatoria {
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  right: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Great Vibes', cursive;
-  font-size: 22px;
-  color: #7b1e28;
-}
 
-.dedicatoria .izq {
-  text-align: left;
-}
 
-.dedicatoria .der {
-  text-align: right;
-}
 
 
 
