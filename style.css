@@ -1,118 +1,124 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  color: white;
-  text-align: center;
+  font-family: Arial, sans-serif;
 
-  background-image: url("fondo.jpg"); /* 👈 AQUÍ */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  /* 🌌 FONDO GENERAL SIEMPRE */
+  background: url("fondo-general.jpg") center/cover no-repeat fixed;
 }
 
-
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.8em;
-}
-
-p {
-    font-size: 1.1em;
-    max-width: 500px;
-}
-
-button {
-    padding: 14px 35px;
-    border: none;
-    border-radius: 30px;
-    background: white;
-    color: #ff2f7a;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 25px;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.1);
-}
-
-.photo, .video {
-    width: 240px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    opacity: 0;
-    transform: scale(0.8);
-    transition: 1s;
-}
-
-.photo {
-    height: 300px;
-    object-fit: cover;
-}
-
-.video {
-    height: auto;
-}
-
-.show {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.frase {
-    margin-top: 20px;
-    font-size: 1.15em;
-}
+/* 💌 CARTITA */
 .cartita {
-  background-image: url("fondo-cartita.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 30px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartita-overlay {
+  background: url("cartita.jpg") center/contain no-repeat;
+  width: 612px;
+  height: 413px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #7b1e28;
+  text-align: center;
+}
+
+.cartita-overlay button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #d94b6a;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* 💖 RAZONES */
+.razones {
+  background: url("fondo-razones.jpg") center/cover no-repeat;
+  padding: 80px 20px;
   text-align: center;
   color: #7b1e28;
 }
 
-.cartita h1 {
-  font-size: 42px;
-}
-
-.cartita h2 {
+.razones h2 {
   font-family: 'Great Vibes', cursive;
-  font-size: 38px;
-  margin-bottom: 30px;
+  font-size: 42px;
+  margin-bottom: 40px;
 }
 
-.grid-razones {
+.grid {
   position: relative;
+  max-width: 900px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 30px;
 }
 
-.v-line {
+.linea {
   position: absolute;
+  left: 50%;
+  top: 0;
   width: 2px;
   height: 100%;
   background: rgba(123,30,40,0.4);
-  left: 50%;
 }
 
 .razon {
-  font-size: 16px;
-  padding: 10px;
+  font-size: 18px;
 }
 
-.corazon img {
-  width: 40px;
+.izquierda { text-align: right; padding-right: 20px; }
+.derecha { text-align: left; padding-left: 20px; }
+
+.centro {
+  grid-column: span 2;
+  font-weight: bold;
+  margin-top: 20px;
 }
+
+/* 🖤 TU APP (ANIMACIONES) */
+.center {
+  text-align: center;
+  padding: 40px;
+}
+
+.photo, .video {
+  max-width: 90%;
+  border-radius: 15px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.frase {
+  margin: 20px;
+  font-size: 18px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #ff5c8a;
+  color: white;
+  cursor: pointer;
+}
+
+
 
 
 
