@@ -71,6 +71,49 @@ button:hover {
     margin-top: 20px;
     font-size: 1.15em;
 }
+.cartita {
+  background-image: url("fondo-cartita.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 30px 20px;
+  text-align: center;
+  color: #7b1e28;
+}
+
+.cartita h1 {
+  font-size: 42px;
+}
+
+.cartita h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+.grid-razones {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.v-line {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: rgba(123,30,40,0.4);
+  left: 50%;
+}
+
+.razon {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.corazon img {
+  width: 40px;
+}
+
 
 
 
