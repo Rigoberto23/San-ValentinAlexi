@@ -1,13 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Ti ❤️</title>
+
+  <!-- Fuente bonita -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
+<!-- 🌸 FONDO GENERAL -->
 <div class="background"></div>
 
-<div id="app"></div>
+<!-- 💌 CARTITA (INICIO) -->
+<section id="cartita" class="cartita">
+  <div class="cartita-overlay fade-in">
+
+    <div class="dedicatoria">
+      <span>De Rigoberto</span>
+      <span>Para Alexa</span>
+    </div>
+
+    <p>Te tengo una sorpresa…</p>
+    <p>No es por una fecha.</p>
+    <p>Es porque te amo ❤️</p>
+
+    <button onclick="irARazones()">Descubrir 💌</button>
+  </div>
+</section>
+
+<!-- 💖 RAZONES -->
+<section id="razones" class="razones hidden">
+  <div class="razones-overlay fade-in">
+    <h2>Razones por las que te amo</h2>
+
+    <div class="razones-grid">
+      <div>Porque eres tú 💕</div>
+      <div>Porque tu sonrisa me calma ✨</div>
+      <div>Porque contigo soy yo 💫</div>
+      <div>Porque haces hogar mi caos 🫶</div>
+    </div>
+
+    <button onclick="iniciarRecuerdos()">Continuar 💕</button>
+  </div>
+</section>
+
+<!-- 📸🎥 RECUERDOS -->
+<div id="app" class="hidden"></div>
 
 <script src="script.js"></script>
 </body>
-
-
+</html>
 
 
 
