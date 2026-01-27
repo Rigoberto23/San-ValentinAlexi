@@ -1,148 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', cursive;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-
-  /* 🌌 FONDO GENERAL SIEMPRE */
-  background: url("fondo-general.jpg") center/cover no-repeat fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #fff;
 }
 
-/* 💌 CARTITA */
-.cartita {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Fondo general */
+.background {
+    position: fixed;
+    inset: 0;
+    background: url("fondo.jpg") center/cover no-repeat;
+    filter: brightness(0.5);
+    z-index: -1;
 }
 
-.cartita-overlay {
-  position: relative; /* 🔑 CLAVE */
-  background: url("cartita.jpg") center/contain no-repeat;
-  width: 612px;
-  height: 413px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  font-family: 'Great Vibes', cursive;
-  font-size: 28px;
-
-  /* 🎯 MISMO COLOR QUE EL TEXTO */
-  color: #7b1e28;
-
-  text-align: center;
+/* Centro general */
+.center {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease;
 }
 
-/* ✍️ DEDICATORIA */
-.dedicatoria {
-  position: absolute;
-  top: 18px;
-  left: 25px;
-  right: 25px;
-
-  display: flex;
-  justify-content: space-between;
-
-  font-family: 'Great Vibes', cursive;
-  font-size: 22px;
-
-  /* 🔥 MISMO COLOR EXACTO */
-  color: #7b1e28;
-
-  z-index: 10;
+/* Botones */
+button {
+    margin-top: 20px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #ff7eb3;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
 }
 
-.cartita-overlay button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  background: #d94b6a;
-  color: white;
-  border-radius: 20px;
-  cursor: pointer;
+button:hover {
+    transform: scale(1.05);
+    background: #ff4f9a;
 }
 
-/* 💖 RAZONES */
+/* Carta */
+.carta {
+    background: url("carta.png") center/contain no-repeat;
+    width: 90%;
+    max-width: 380px;
+    height: 260px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #5a2a2a;
+    animation: slideUp 1s ease;
+}
+
+.carta h2 {
+    font-size: 1.2rem;
+}
+
+.carta p {
+    font-size: 0.95rem;
+}
+
+.carta .firmas {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+/* Razones */
 .razones {
-  background: url("fondo-razones.jpg") center/cover no-repeat;
-  padding: 80px 20px;
-  text-align: center;
-  color: #7b1e28;
-}
-
-.razones h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 42px;
-  margin-bottom: 40px;
-}
-
-.grid {
-  position: relative;
-  max-width: 900px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.linea {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: rgba(123,30,40,0.4);
+    background: url("razones.jpg") center/cover no-repeat;
+    border-radius: 20px;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 1s ease;
 }
 
 .razon {
-  font-size: 18px;
+    display: flex;
+    margin: 12px 0;
 }
 
-.izquierda { text-align: right; padding-right: 20px; }
-.derecha { text-align: left; padding-left: 20px; }
-
-.centro {
-  grid-column: span 2;
-  font-weight: bold;
-  margin-top: 20px;
+.razon.izq {
+    justify-content: flex-start;
 }
 
-/* 🖤 TU APP (ANIMACIONES) */
-.center {
-  text-align: center;
-  padding: 40px;
+.razon.der {
+    justify-content: flex-end;
 }
 
+.razon span {
+    background: rgba(0,0,0,0.6);
+    padding: 10px 16px;
+    border-radius: 20px;
+    max-width: 70%;
+    font-size: 0.9rem;
+}
+
+/* Fotos y videos */
 .photo, .video {
-  max-width: 90%;
-  border-radius: 15px;
-  opacity: 0;
-  transform: scale(0.9);
-  transition: all 0.8s ease;
+    max-width: 90%;
+    max-height: 60vh;
+    border-radius: 20px;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 1s ease;
 }
 
 .show {
-  opacity: 1;
-  transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
 }
 
 .frase {
-  margin: 20px;
-  font-size: 18px;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    padding: 0 10px;
 }
 
-button {
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  background: #ff5c8a;
-  color: white;
-  cursor: pointer;
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
-.cartita-overlay {
-  position: relative; /* necesario para ubicar textos */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+/* Mobile first */
+@media (max-width: 480px) {
+    .carta {
+        height: 240px;
+    }
+    .frase {
+        font-size: 1rem;
+    }
+}
+
 
 
 
