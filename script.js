@@ -33,7 +33,7 @@ function irARazones() {
     el.textContent = "";
 
     setTimeout(() => {
-      escribirTextoRebote(el, texto, 40);
+      escribirTextoRebote(el, texto, 70);
 
     }, index * 800); // delay entre razones 💕
   });
@@ -95,7 +95,7 @@ function mostrarRecuerdo() {
 
   const frase = document.createElement("div");
   frase.className = "frase";
-  escribirTextoRebote(frase, item.frase, 40);
+  escribirTextoRebote(frase, item.frase, 70);
 
 
 
@@ -137,6 +137,7 @@ function escribirTextoRebote(elemento, texto, velocidad = 40) {
     if (i >= texto.length) clearInterval(intervalo);
   }, velocidad);
 }
+
 
 
 
