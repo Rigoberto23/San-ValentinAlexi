@@ -82,7 +82,7 @@ button {
 }
 
 .razones-overlay {
-  background: url("razones.jpg") center/cover no-repeat;
+  background: url("razones1.jpg") center/cover no-repeat;
   width: 90%;
   max-width: 500px;
   padding: 30px;
@@ -160,6 +160,7 @@ button {
     opacity: 1;
   }
 }
+
 
 
 
