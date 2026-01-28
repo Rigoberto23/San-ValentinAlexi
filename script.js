@@ -123,20 +123,29 @@ function mostrarFinal() {
     </div>
   `;
 }
-function escribirTextoRebote(elemento, texto, velocidad = 40) {
+function escribirTextoRebote(elemento, texto, velocidad = 70) {
   elemento.innerHTML = "";
+
+  const caracteres = Array.from(texto); // 🔥 soporta emojis
   let i = 0;
 
   const intervalo = setInterval(() => {
     const span = document.createElement("span");
     span.className = "letra";
-    span.textContent = texto.charAt(i);
-    elemento.appendChild(span);
 
+    if (caracteres[i] === " ") {
+      span.innerHTML = "&nbsp;"; // 🔑 mantiene espacios
+    } else {
+      span.textContent = caracteres[i];
+    }
+
+    elemento.appendChild(span);
     i++;
-    if (i >= texto.length) clearInterval(intervalo);
+
+    if (i >= caracteres.length) clearInterval(intervalo);
   }, velocidad);
 }
+
 
 
 
