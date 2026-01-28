@@ -89,7 +89,7 @@ button {
   padding: 20px;
   border-radius: 20px;
   box-sizing: border-box;
-  color: white;
+  color: ivory;
   text-align: center;
 }
 
@@ -137,7 +137,7 @@ button {
 /* 🔑 FRASES */
 .frase {
   font-size: 18px;
-  color: white;
+  color: ivory;
   white-space: normal; /* ← CLAVE */
 }
 
@@ -162,6 +162,7 @@ button {
     opacity: 1;
   }
 }
+
 
 
 
