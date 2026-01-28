@@ -73,35 +73,37 @@ button {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/* 💖 RAZONES */
+.razones {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .razones-overlay {
-    width: 92%;
-    max-width: 420px;
+.razones-overlay {
+  background: url("razones.jpg") center/cover no-repeat;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+}
 
-    padding: 40px 25px; /* 🔑 menos ancho */
-    background-size: contain;
-    background-position: center;
+.razones-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
 
-    box-sizing: border-box;
-  }
-
-  .razones-grid {
-    grid-template-columns: 1fr; /* 🔥 UNA SOLA COLUMNA */
-    gap: 16px;
-
-    max-width: 100%;
-    margin: 20px auto;
-  }
-
-  .razon {
-    font-size: 15px;
-    line-height: 1.6;
-    padding: 0 10px; /* aire interno */
-  }
-
-
-
+/* 🔑 MUY IMPORTANTE */
+.razon {
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: normal;   /* ← NO pre-wrap aquí */
+}
 
 /* 📸🎥 RECUERDOS */
 #app {
@@ -158,13 +160,6 @@ button {
     opacity: 1;
   }
 }
-
-
-
-
-
-
-
 
 
 
