@@ -109,6 +109,17 @@ function mostrarFinal() {
     </div>
   `;
 }
+function escribirTexto(elemento, texto, velocidad = 40) {
+  elemento.textContent = "";
+  let i = 0;
+
+  const intervalo = setInterval(() => {
+    elemento.textContent += texto.charAt(i);
+    i++;
+    if (i >= texto.length) clearInterval(intervalo);
+  }, velocidad);
+}
+
 
 
 
