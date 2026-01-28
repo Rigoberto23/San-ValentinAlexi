@@ -18,14 +18,25 @@ let indice = 0;
 
 /* FLUJO */
 function irARazones() {
-  document.getElementById("cartita").classList.add("hidden");
-  document.getElementById("razones").classList.remove("hidden");
+  const cartita = document.getElementById("cartita");
+  const razones = document.getElementById("razones");
+
+  cartita.classList.add("hidden");
+  razones.classList.remove("hidden");
+
+  // 🔽 Scroll suave hacia Razones
+  razones.scrollIntoView({ behavior: "smooth" });
 }
 
-function iniciarRecuerdos() {
-  document.getElementById("razones").classList.add("hidden");
-  app.classList.remove("hidden");
-  mostrarInicio();
+function irARazones() {
+  const cartita = document.getElementById("cartita");
+  const razones = document.getElementById("razones");
+
+  cartita.classList.add("hidden");
+  razones.classList.remove("hidden");
+
+  // 🔽 Scroll suave hacia Razones
+  razones.scrollIntoView({ behavior: "smooth" });
 }
 
 function mostrarInicio() {
@@ -97,6 +108,7 @@ function mostrarFinal() {
     </div>
   `;
 }
+
 
 
 
