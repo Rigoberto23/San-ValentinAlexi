@@ -44,11 +44,9 @@ body {
   width: 90%;
   max-width: 612px;
   aspect-ratio: 612 / 413;
-
   position: relative;
   text-align: center;
   padding: 40px;
-
   font-family: 'Great Vibes', cursive;
   font-size: 26px;
   color: #7b1e28;
@@ -100,6 +98,13 @@ button {
   margin: 20px 0;
 }
 
+/* 🔑 MUY IMPORTANTE */
+.razon {
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: normal;   /* ← NO pre-wrap aquí */
+}
+
 /* 📸🎥 RECUERDOS */
 #app {
   min-height: 100vh;
@@ -127,25 +132,27 @@ button {
   opacity: 1;
 }
 
+/* 🔑 FRASES */
 .frase {
   font-size: 18px;
   color: white;
-}
-.letra {
-  display: inline-block;
-  opacity: 1;              /* queda visible */
-  animation: rebote 0.5s ease forwards;
-  animation-fill-mode: both; /* mantiene el estado final */
+  white-space: normal; /* ← CLAVE */
 }
 
+/* ✨ LETRAS ANIMADAS */
+.letra {
+  display: inline;
+  opacity: 1;
+  animation: rebote 0.8s ease-out forwards;
+}
 
 @keyframes rebote {
   0% {
-    transform: translateY(10px);
+    transform: translateY(8px);
     opacity: 0;
   }
   60% {
-    transform: translateY(-6px);
+    transform: translateY(-4px);
     opacity: 1;
   }
   100% {
@@ -154,9 +161,6 @@ button {
   }
 }
 
-.razon, .frase {
-  white-space: pre-wrap;
-}
 
 
 
