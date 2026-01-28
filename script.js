@@ -28,15 +28,16 @@ function irARazones() {
   razones.scrollIntoView({ behavior: "smooth" });
 }
 
-function irARazones() {
-  const cartita = document.getElementById("cartita");
+function iniciarRecuerdos() {
   const razones = document.getElementById("razones");
 
-  cartita.classList.add("hidden");
-  razones.classList.remove("hidden");
+  razones.classList.add("hidden");
+  app.classList.remove("hidden");
 
-  // 🔽 Scroll suave hacia Razones
-  razones.scrollIntoView({ behavior: "smooth" });
+  // 🔽 Scroll suave hacia Recuerdos
+  app.scrollIntoView({ behavior: "smooth" });
+
+  mostrarInicio();
 }
 
 function mostrarInicio() {
